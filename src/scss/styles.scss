@@ -1,7 +1,12 @@
 @import "_variables";
+@import "_mixins";
 
 body {
   background: $bg;
+}
+
+h1 {
+  @include Title();
 }
 
 .box {
@@ -11,7 +16,7 @@ body {
   }
   h2 {
     color: blue;
-    &:hover{
+    &:hover {
       color: red;
     }
   }

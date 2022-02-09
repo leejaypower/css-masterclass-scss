@@ -1,5 +1,27 @@
+@import "_variables.scss";
+
 @mixin Title {
   color: purple;
   font-size: 30px;
   margin-bottom: 12px;
+}
+
+@mixin responsive($device) {
+  @if $device == "iphone" {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      @content;
+    }
+  } @else if $device == "iphone-l" {
+    @media screen and (max-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $device == "ipad-l" {
+    @media screen and (max-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+      @content;
+    }
+  }
 }

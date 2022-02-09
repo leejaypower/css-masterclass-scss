@@ -7,7 +7,16 @@ body {
 }
 
 h1 {
-  @include Title();
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 60px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
 }
 
 .box {
@@ -26,10 +35,10 @@ h1 {
   }
 }
 
-a {
-  @extend %button;
-  text-decoration: none;
-}
+// a {
+//   @extend %button;
+//   text-decoration: none;
+// }
 
 button {
   @extend %button;

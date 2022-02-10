@@ -1,0 +1,46 @@
+@import "_variables";
+@import "_mixins";
+@import "_extends";
+
+body {
+  background: $bg;
+}
+
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 60px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
+}
+
+.box {
+  margin-top: 20px;
+  &:hover {
+    background-color: green;
+  }
+  h2 {
+    color: blue;
+    &:hover {
+      color: red;
+    }
+  }
+  button {
+    color: red;
+  }
+}
+
+// a {
+//   @extend %button;
+//   text-decoration: none;
+// }
+
+button {
+  @extend %button;
+  border: none;
+}

@@ -1,12 +1,11 @@
 # SCSS 실습의 장🖌️
 
-[SCSS의 기본 concepts와 logic을 이해](https://github.com/leejaypower/TIL/blob/main/CSS/SCSS.md)하고 11개의 멋진 사이트들을 클론하면서 실습합니다!
+SCSS의 기본 concepts와 logic을 이해하고 11개의 멋진 사이트들을 클론하면서 실습합니다!
 
-- [x] Variables
-- [x] Nesting
-- [x] Mixins
-- [x] Extend
-- [x] Responsive Mixins
+- [x] [Variables](https://github.com/leejaypower/TIL/blob/main/CSS/SCSS.md#variables)
+- [x] [Nesting](https://github.com/leejaypower/TIL/blob/main/CSS/SCSS.md#nesting)
+- [x] [Mixins](https://github.com/leejaypower/TIL/blob/main/CSS/SCSS.md#mixin)
+- [x] [Extend](https://github.com/leejaypower/TIL/blob/main/CSS/SCSS.md#extends)
 
 <hr>
 

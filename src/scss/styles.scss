@@ -1,5 +1,6 @@
 @import "_variable";
 @import "reset";
+@import "_mixins";
 
 * {
   box-sizing: border-box;
@@ -25,15 +26,36 @@ body {
   color: $red;
   overflow-y: auto;
 
+  @include responsive("phone") {
+    width: 100vw;
+    height: auto;
+    padding: 15vw 15vw 10vw 10vw;
+    position: relative;
+  }
+
   h1 {
+    width: 90%;
     font-size: 5rem;
-    width: 70%;
     text-transform: uppercase;
     letter-spacing: 5px;
+
+    @include responsive("phone") {
+      width: 100%;
+      font-size: 3rem;
+    }
+
+    @include tablet("tablet");
+
+    @include bigScreen("4k");
   }
 
   .bottom {
     width: 70%;
+
+    @include responsive("phone") {
+      width: 100%;
+    }
+
     h3 {
       font-size: 1.5em;
       font-weight: 350;
@@ -48,6 +70,10 @@ body {
       font-weight: 550;
       text-align: justify;
       margin-bottom: 35px;
+
+      @include responsive("phone") {
+        font-size: 1em;
+      }
     }
 
     nav {
@@ -56,6 +82,10 @@ body {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 10px;
+
+        @include responsive("phone") {
+          width: 100%;
+        }
 
         li {
           cursor: pointer;
@@ -84,8 +114,11 @@ body {
 }
 
 main {
-  height: 400vh;
   margin-left: $fixedWidth;
+
+  @include responsive("phone") {
+    margin-left: 0;
+  }
 
   .movie-header {
     h2 {
@@ -94,13 +127,24 @@ main {
       font-weight: bold;
       margin-bottom: 30px;
       display: inline-block;
+
+      @include responsive("phone") {
+        font-size: 2em;
+        margin-bottom: 0;
+      }
     }
+
     h3 {
       color: $white;
       font-size: 1em;
       font-weight: bold;
       margin-top: 30px;
       float: right;
+
+      @include responsive("phone") {
+        float: none;
+        margin-top: 10px;
+      }
     }
   }
   .movie {
@@ -125,10 +169,18 @@ main {
         ),
         $red;
 
+      @include responsive("phone") {
+        padding: 50px;
+      }
+
       img {
         width: 100%;
         margin-bottom: 30px;
         box-shadow: rgba(0, 0, 0, 0.7) 0px 25px 60px -20px;
+
+        @include responsive("phone") {
+          margin-top: 30px;
+        }
       }
       p {
         color: $white;
@@ -139,6 +191,10 @@ main {
         text-align: justify;
         line-height: 1.5;
         text-indent: 2em;
+
+        @include responsive("phone") {
+          margin-left: 0;
+        }
       }
       .my-rating {
         margin-top: 10px;

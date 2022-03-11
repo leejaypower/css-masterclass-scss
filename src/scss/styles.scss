@@ -33,6 +33,14 @@ body {
     position: relative;
   }
 
+  @include responsive("bigTablet") {
+    padding: 10vh 0 72px 60px;
+  }
+
+  @include responsive("laptop") {
+    padding: 10vh 0 72px 60px;
+  }
+
   h1 {
     width: 90%;
     font-size: 5rem;
@@ -44,9 +52,19 @@ body {
       font-size: 3rem;
     }
 
-    @include tablet("tablet");
+    @include responsive("middle");
 
-    @include bigScreen("4k");
+    @include responsive("tablet");
+
+    @include responsive("bigTablet") {
+      font-size: 3rem;
+    }
+
+    @include responsive("laptop") {
+      font-size: 4rem;
+    }
+
+    @include responsive("4k");
   }
 
   .bottom {
@@ -54,6 +72,10 @@ body {
 
     @include responsive("phone") {
       width: 100%;
+    }
+
+    @include responsive("laptop") {
+      width: 85%;
     }
 
     h3 {
@@ -132,6 +154,10 @@ main {
         font-size: 2em;
         margin-bottom: 0;
       }
+
+      @include responsive("laptop") {
+        margin-bottom: 15px;
+      }
     }
 
     h3 {
@@ -144,6 +170,18 @@ main {
       @include responsive("phone") {
         float: none;
         margin-top: 10px;
+      }
+
+      @include responsive("bigTablet") {
+        float: none;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      @include responsive("laptop") {
+        float: none;
+        margin-top: 0px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -193,6 +231,14 @@ main {
         text-indent: 2em;
 
         @include responsive("phone") {
+          margin-left: 0;
+        }
+
+        @include responsive("bigTablet") {
+          margin-left: 0;
+        }
+
+        @include responsive("laptop") {
           margin-left: 0;
         }
       }

@@ -1,26 +1,42 @@
 $minPhone: 320px;
-$maxPhone: 480px;
+$maxPhone: 540px;
 $minTablet: 768px;
-$maxTablet: 1024px - 1;
+$middleTablet: 850px;
+$maxTablet: 1024 - 1px;
+$minlaptop: 1024px;
 $min4k: 1980px;
 
 @mixin responsive($width) {
   @if $width == "phone" {
-    @media screen and (min-width: $minPhone) and (max-width: $minTablet) {
+    @media screen and (min-width: $minPhone) and (max-width: $middleTablet) {
       @content;
     }
   }
-}
 
-@mixin tablet($width) {
-  @if $width == "tablet" {
-    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+  @if $width == "middle" {
+    @media screen and (min-width: 540px) and (max-width: $middleTablet) {
       font-size: 5rem;
     }
   }
-}
 
-@mixin bigScreen($width) {
+  @if $width == "tablet" {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+      font-size: 6.5rem;
+    }
+  }
+
+  @if $width == "bigTablet" {
+    @media screen and (min-width: $middleTablet) and (max-width: $minlaptop) {
+      @content;
+    }
+  }
+
+  @if $width == "laptop" {
+    @media screen and (min-width: $minlaptop) and (max-width: 1350px) {
+      @content;
+    }
+  }
+
   @if $width == "4k" {
     @media screen and (min-width: $min4k) {
       font-size: 7rem;

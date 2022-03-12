@@ -9,7 +9,7 @@ SCSS의 기본 concepts와 logic을 이해하고 11개의 멋진 사이트들을
 
 <hr>
 
-1. [ ] https://besthorrorscenes.com/
+1. [x] https://besthorrorscenes.com/
 1. [ ] https://paint-box.com/
 1. [ ] http://10x19.co/
 1. [ ] http://www.z-o-o.fr/
